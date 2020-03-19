@@ -38,10 +38,17 @@ class CreateOrderRequest extends AbstractRequest
      * @var Place[] Массив с местами для перевозки
      */
     protected $places;
+
     /**
      * @var ExtraParam[] Массив доп параметрами
      */
     protected $extraParams;
+
+    /**
+     * TODO: create object
+     * @var array адрес возврата
+     */
+    protected $returnAddress;
 
     /**
      * @return Order
@@ -248,4 +255,23 @@ class CreateOrderRequest extends AbstractRequest
 
         return $this;
     }
+
+    /**
+     * @return array
+     */
+    public function getReturnAddress()
+    {
+        return $this->returnAddress;
+    }
+
+    /**
+     * @param array $returnAddress
+     * @return CreateOrderRequest
+     */
+    public function setReturnAddress($returnAddress)
+    {
+        $this->returnAddress = $returnAddress;
+        return $this;
+    }
+
 }

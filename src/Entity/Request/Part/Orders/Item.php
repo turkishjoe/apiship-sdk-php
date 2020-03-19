@@ -53,6 +53,16 @@ class Item extends AbstractRequestPart
     protected $quantity;
 
     /**
+     * @var string Код маркировки
+     */
+    protected $markCode;
+
+    /**
+     * @var integer Заполняется только при частичной доставке и показывает сколько вложимых выкуплен
+     */
+    protected $quantityDelivered;
+
+    /**
      * @return string
      */
     public function getBarcode()
@@ -274,4 +284,43 @@ class Item extends AbstractRequestPart
         $this->quantity = $quantity;
         return $this;
     }
+
+    /**
+     * @return string
+     */
+    public function getMarkCode()
+    {
+        return $this->markCode;
+    }
+
+    /**
+     * @param string $markCode
+     * @return Item
+     */
+    public function setMarkCode(string $markCode)
+    {
+        $this->markCode = $markCode;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getQuantityDelivered()
+    {
+        return $this->quantityDelivered;
+    }
+
+    /**
+     * @param int $quantityDelivered
+     * @return Item
+     */
+    public function setQuantityDelivered($quantityDelivered)
+    {
+        $this->quantityDelivered = $quantityDelivered;
+        return $this;
+    }
+
+
 }
