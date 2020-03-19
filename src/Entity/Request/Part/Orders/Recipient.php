@@ -69,6 +69,16 @@ class Recipient extends AbstractRequestPart
     protected $comment;
 
     /**
+     * @var double широта
+     */
+    protected $lat;
+
+    /**
+     * @var double Долгота
+     */
+    protected $lng;
+
+    /**
      * @var string Адрес строкой
      */
     protected $addressString;
@@ -415,7 +425,7 @@ class Recipient extends AbstractRequestPart
     {
         return $this->addressString;
     }
-    
+
     /**
      * @param string $addressString
      *
@@ -427,4 +437,44 @@ class Recipient extends AbstractRequestPart
 
         return $this;
     }
+
+    /**
+     * @return double
+     */
+    public function getLat()
+    {
+        return $this->lat;
+    }
+
+    /**
+     * @param double $lat
+     * @return Recipient
+     */
+    public function setLat($lat)
+    {
+        $this->lat = $lat;
+        return $this;
+    }
+
+    /**
+     * @return double
+     */
+    public function getLng()
+    {
+        return $this->lng;
+    }
+
+    /**
+     * @param double $lng
+     * @return Recipient
+     */
+    public function setLng($lng)
+    {
+        $this->lng = $lng;
+
+        return $this;
+    }
+
+
+
 }
