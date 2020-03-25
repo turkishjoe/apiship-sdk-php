@@ -5,6 +5,7 @@ namespace Apiship\Entity\Request;
 use Apiship\Entity\AbstractRequest;
 use Apiship\Entity\Request\Part\Orders\Order;
 use Apiship\Entity\Request\Part\Orders\Cost;
+use Apiship\Entity\Request\Part\Orders\ReturnAddress;
 use Apiship\Entity\Request\Part\Orders\Sender;
 use Apiship\Entity\Request\Part\Orders\Recipient;
 use Apiship\Entity\Request\Part\Orders\Item;
@@ -45,8 +46,7 @@ class CreateOrderRequest extends AbstractRequest
     protected $extraParams;
 
     /**
-     * TODO: create object
-     * @var array адрес возврата
+     * @var ReturnAddress адрес возврата
      */
     protected $returnAddress;
 
