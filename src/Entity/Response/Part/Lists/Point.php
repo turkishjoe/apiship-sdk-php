@@ -102,6 +102,12 @@ class Point extends AbstractResponsePart
     protected $name;
 
     /**
+     * @var string Адресс
+     */
+    protected $address;
+
+
+    /**
      * @return string
      */
     public function getName()
@@ -581,6 +587,24 @@ class Point extends AbstractResponsePart
     public function setCod($cod) {
         $this->cod = $cod;
         
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddress()
+    {
+        return $this->address;
+    }
+
+    /**
+     * @param string $address
+     * @return $this
+     */
+    public function setAddress($address)
+    {
+        $this->address = $address;
         return $this;
     }
 }
